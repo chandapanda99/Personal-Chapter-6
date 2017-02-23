@@ -14,7 +14,17 @@ public class MagicClass
     
     public boolean isMagic()
     {
+        int [] rowed = addRows();
+        int [] columned = addColumns();
+        int magic = getMagicNum();
         
+        if (rowed.length != columned.length)
+        {
+            return false;
+        }
+        else {
+            return true;
+        }
     }
     
     public int getMagicNum()
@@ -65,7 +75,7 @@ public class MagicClass
         int[] sumss = new int[array.length];
         for (int c = 0; c < array.length; c++)
         {
-            sumss[c] = addColumns(c);
+            sumss[c] = addColumn(c);
         }
         
         return sumss;
