@@ -40,7 +40,7 @@ public class MagicSquareTest
                             {10, 18, 1, 14, 22},
                             {23, 6, 19, 2, 15}  };
     
-        MagicClass useful = new MagicClass(square1);
+        MagicClass useful = new MagicClass(square);
     
         if (useful.isMagic( ))
             System.out.println("It's MAGIC!!");
