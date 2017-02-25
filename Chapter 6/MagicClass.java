@@ -1,28 +1,35 @@
 /**
- * Write a description of class MagicClass here.
+ * A class program that tests Magic Squares to see if they are really magical or not
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * Aayush Chanda
+ * Magic Class
  */
 public class MagicClass
 {
+    //Initializing an array for the constructor
     int[][] array;
+    
+    //Constructor
     public MagicClass(int[][] array)
     {
         this.array = array;
     }
     
+    //Method to check whether a square is magical or not
     public boolean isMagic()
     {
+        //variables to store the values returned from other methods that are needed
         int [] rowed = addRows();
         int [] columned = addColumns();
         int magic = getMagicNum();
         
+        //check to see if the two arrays are equal in length
         if (rowed.length != columned.length) {
             return false;
-        } else {
-            // TODO: iterate over "rowed" and "columned" and make sure
-            // that every element is equal to the magic number "magic"
+        } 
+        else 
+        {
+            //iterate over "rowed" and "columned" and make sure that every element is equal to the magic number "magic"
             for (int i = 0; i < rowed.length; i++)
             {
                 if (rowed[i] != magic)
@@ -42,16 +49,14 @@ public class MagicClass
         }
     }
     
+    //method that goes and takes the magic number
     public int getMagicNum()
     {
         int magic = addRow(0);
         return magic;
     }
     
-    public void setMagicSquare(int[][] array)
-    {
-    }
-    
+    //method that adds up all the ints in a row of the array
     public int addRow(int row)
     {
         int rowAdded = 0;
@@ -65,6 +70,7 @@ public class MagicClass
         return rowAdded;
     }
     
+    //creates an array of all the sums of the rows
     public int[] addRows()
     {
         int[] sums = new int[array.length];
@@ -76,6 +82,7 @@ public class MagicClass
         return sums;
     }
     
+    //method that adds up all of the ints in a column of the array
     public int addColumn(int col)
     {
         int colAdded = 0;
@@ -89,6 +96,7 @@ public class MagicClass
         return colAdded;
     }
     
+    //creates an array of all the sums of the columns
     public int[] addColumns()
     {
         int[] sumss = new int[array.length];
