@@ -163,6 +163,7 @@ public class mathy
 
     public static int sum2DArray(int [][] scores)
     {
+        int sum = 0;
         for ( int row=0, sum = 0; row < scores.length; row++)
         {
             for (int col=0; col < scores[row].length; col++)
@@ -172,7 +173,7 @@ public class mathy
 
             System.out.println();
         }
-        return 0;
+        return sum;
     }
 
 
@@ -196,6 +197,8 @@ public class mathy
         {
             total += array[i][col - 1];
         }
+        
+        return total;
     }
 
 

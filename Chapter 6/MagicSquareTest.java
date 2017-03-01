@@ -1,7 +1,5 @@
 /********************************************************************
 // Starter Code for Magic Square
-
-
 import
 //******************************************************************* */
 
@@ -41,27 +39,44 @@ public class MagicSquareTest
                             {23, 6, 19, 2, 15}  };
     
         MagicClass useful = new MagicClass(square);
-    
+        MagicClass useless = new MagicClass(square1);
+        MagicClass used = new MagicClass(square2);
+        
+        useful.toString();
         if (useful.isMagic( ))
+        {
             System.out.println("It's MAGIC!!");
+        }
         else
+        {
             System.out.println("Hello muggle");
-    
-    
+        }
+        System.out.println();
+        
+        useless.toString();
+        if (useless.isMagic( ))
+        {
+            System.out.println("It's MAGIC!!");
+        }
+        else
+        {
+            System.out.println("Hello muggle");
+        }
+        System.out.println();
+        
+        used.toString();
+        if (used.isMagic())
+        {
+            System.out.println("It's MAGIC!!");
+        }
+        else
+        {
+            System.out.println("Hello muggle");
+        }
+        
         // print the same results for square2 and square3
 
 
 
     }//end of main
 }// end of class
-
-
-
-
-
-
-
-
-
-
-
